@@ -9,19 +9,19 @@ export default function Home() {
       </Head>
       <header>
         <nav>
-          <a href="" className="header-item">
+          <a href="#about" className="header-item">
             ABOUT
           </a>
-          <a href="" className="header-item">
+          <a href="#menu" className="header-item">
             MENU
           </a>
         </nav>
-        <img src="./logo.png" className="header-image" />
+        <img src="./logo.svg" className="header-image" />
         <nav>
-          <a href="" className="header-item">
+          <a href="#reviews" className="header-item">
             REVIEWS
           </a>
-          <a href="" className="header-item">
+          <a href="#contact" className="header-item">
             CONTACT
           </a>
         </nav>
@@ -29,7 +29,11 @@ export default function Home() {
       <main>
         <div className="container">
           <div>
-            <h3 className="small-heading">ABOUT</h3>
+            <h3 className="small-heading">PHOTOS</h3>
+            <div className="divider"></div>
+            <h3 className="small-heading" id="about">
+              ABOUT
+            </h3>
             <div className="divider"></div>
             <div style={{ display: "flex" }}>
               <img
@@ -37,8 +41,6 @@ export default function Home() {
                 style={{
                   height: 300,
                   width: "auto",
-                  paddingTop: 50,
-                  paddingBottom: 50,
                   paddingLeft: 0,
                   paddingRight: 50,
                 }}
@@ -52,7 +54,10 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <h3 className="small-heading">MENU</h3>
+
+          <h3 className="small-heading" id="menu">
+            MENU
+          </h3>
           <div className="divider"></div>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div className="column-one">
@@ -147,14 +152,39 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <p>
+          <p className="copy">
             *This is just a sample menu of our most common menu options. If you
             don’t see what you’re looking for on our menu or if you have allergy
             concerns, shoot us an email, and we’ll be happy to let you know if
             we’re the best choice for you!
           </p>
-          <h3 className="small-heading">Reviews</h3>
+          <h3 className="small-heading" id="reviews">
+            REVIEWS
+          </h3>
           <div className="divider"></div>
+          <p className="copy">
+            “Mr. B’s does more than barbeque. The Binns made my wedding
+            reception extra special.”
+          </p>
+          <p className="copy">“Best Barbeque I’ve ever had!” </p>
+          <p className="copy">“Mrs B’s mac and cheese is to die for!” </p>
+          <h3 className="small-heading" id="contact">
+            CONTACT
+          </h3>
+          <div className="divider"></div>
+          <div>
+            <span className="copy">
+              Contact us for pricing and to check our availability at
+            </span>
+            <a className="copy"> mrbsbarbeque@gmail.com</a>
+            <span className="copy">.</span>
+          </div>
+          <div style={{ marginTop: 5 }}>
+            <span className="copy">And don't forget to follow us on </span>
+            <a href="https://www.facebook.com/mrbbbq/about" className="copy">
+              Facebook!
+            </a>
+          </div>
         </div>
       </main>
 
@@ -174,6 +204,38 @@ export default function Home() {
           color: #fffde2;
           padding: 30px;
         }
+      }
+      .header-image {
+        height: 200px;
+        width: auto;
+      }
+      main {
+        height: 100%;
+        margin: 0 auto;
+        background-color: #022b40;
+        color: #fffde2;
+        padding-bottom: 200px;
+      }
+      .container {
+        margin: 0 auto;
+        width: 1000px;
+        height: 100%;
+      }
+      .small-heading {
+        margin: 0;
+        padding: 50px 0 0 0;
+      }
+      .divider {
+        height: 2px;
+        width: 1000px;
+        background-color: #f2521d;
+        margin: 15px 0 50px 0;
+      }
+        .menu {
+          line-height: 1.25;
+          font-family: "Montserrat", sans-serif;
+          font-size: 18px;
+        }
         h3 {
           font-family: "Bebas Neue", cursive;
           font-size: 30px;
@@ -183,36 +245,11 @@ export default function Home() {
           font-size: 24px;
         }
         .copy {
-          padding: 50px;
           margin: 0;
           line-height: 1.25;
           font-family: "Montserrat", sans-serif;
-          font-size: 20px;
-        }
-        .header-image {
-          height: 200px;
-          width: auto;
-        }
-        main {
-          height: 100%;
-          margin: 0 auto;
-          background-color: #022b40;
+          font-size: 18px;
           color: #fffde2;
-          padding-bottom: 30px;
-        }
-        .container {
-          margin: 0 auto;
-          width: 1000px;
-          height: 100%;
-        }
-        .small-heading {
-          margin: 0;
-          padding: 50px 0 10px 0;
-        }
-        .divider {
-          height: 2px;
-          width: 1000px;
-          background-color: #f2521d;
         }
       `}</style>
       <style jsx global>{`

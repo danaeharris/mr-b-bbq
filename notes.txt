@@ -1,0 +1,3 @@
+Fix white edges on top and bottom when you scroll to the edge of the website.
+Get Dad to give me reviews.
+Add food photos from my wedding photos.
