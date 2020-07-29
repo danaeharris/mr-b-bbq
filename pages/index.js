@@ -1,11 +1,32 @@
 import Head from "next/head";
+import Slider from "react-slick";
 
 export default function Home() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <div>
       <Head>
         <title>Mr. B's BBQ</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
       </Head>
       <header>
         <nav>
@@ -31,6 +52,19 @@ export default function Home() {
           <div>
             <h3 className="small-heading">PHOTOS</h3>
             <div className="divider"></div>
+            <Slider {...settings} className="slider">
+              <img src="./smoker.svg" className="past-work" />
+              <img src="./fire.svg" className="past-work" />
+              <img src="./cookies.svg" className="past-work" />
+              <img src="./strawberry-cookies.svg" className="past-work" />
+              <img src="./sweet-tea.svg" className="past-work" />{" "}
+              <img src="./wedding-people.svg" className="past-work" />
+              <img src="./infused-water.svg" className="past-work" />
+              <img src="./skewers.svg" className="past-work" />
+              <img src="./grilled-chicken.svg" className="past-work" />
+              <img src="./roasted-potatoes.svg" className="past-work" />
+              <img src="./brookies.svg" className="past-work" />
+            </Slider>
             <h3 className="small-heading" id="about">
               ABOUT
             </h3>
@@ -44,7 +78,7 @@ export default function Home() {
                   paddingLeft: 0,
                   paddingRight: 50,
                 }}
-              ></img>
+              />
               <p className="copy">
                 Hi there! Our names are Chuck and Jan Binns. We’ve been catering
                 for the last 10 years. We specialise in BBQ and traditional
@@ -204,33 +238,40 @@ export default function Home() {
           color: #fffde2;
           padding: 30px;
         }
-      }
-      .header-image {
-        height: 200px;
-        width: auto;
-      }
-      main {
-        height: 100%;
-        margin: 0 auto;
-        background-color: #022b40;
-        color: #fffde2;
-        padding-bottom: 200px;
-      }
-      .container {
-        margin: 0 auto;
-        width: 1000px;
-        height: 100%;
-      }
-      .small-heading {
-        margin: 0;
-        padding: 50px 0 0 0;
-      }
-      .divider {
-        height: 2px;
-        width: 1000px;
-        background-color: #f2521d;
-        margin: 15px 0 50px 0;
-      }
+        .header-image {
+          height: 200px;
+          width: auto;
+        }
+        main {
+          height: 100%;
+          margin: 0 auto;
+          background-color: #022b40;
+          color: #fffde2;
+          padding-bottom: 200px;
+        }
+        .container {
+          margin: 0 auto;
+          width: 1000px;
+          height: 100%;
+        }
+        .small-heading {
+          margin: 0;
+          padding: 50px 0 0 0;
+        }
+        .divider {
+          height: 2px;
+          width: 1000px;
+          background-color: #f2521d;
+          margin: 15px 0 50px 0;
+        }
+        .slider {
+          max-width: 100px;
+        }
+        .past-work {
+          height: 350px;
+          width: "auto";
+          margin: 10px;
+        }
         .menu {
           line-height: 1.25;
           font-family: "Montserrat", sans-serif;
