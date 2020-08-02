@@ -52,7 +52,7 @@ export default function Home() {
           <div>
             <h3 className="small-heading">PHOTOS</h3>
             <div className="divider"></div>
-            <Slider {...settings} className="slider">
+            <Slider {...settings} style={{ width: 950, marginLeft: 25 }}>
               <img src="./smoker.svg" className="past-work" />
               <img src="./fire.svg" className="past-work" />
               <img src="./cookies.svg" className="past-work" />
@@ -264,9 +264,7 @@ export default function Home() {
           background-color: #f2521d;
           margin: 15px 0 50px 0;
         }
-        .slider {
-          max-width: 100px;
-        }
+
         .past-work {
           height: 350px;
           width: "auto";
