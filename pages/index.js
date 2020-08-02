@@ -30,7 +30,7 @@ export default function Home() {
         />
       </Head>
       <header>
-        <nav>
+        <nav className="hide-on-mobile">
           <a href="#about" className="header-item">
             ABOUT
           </a>
@@ -39,7 +39,7 @@ export default function Home() {
           </a>
         </nav>
         <img src="./logo.svg" className="header-image" />
-        <nav>
+        <nav className="hide-on-mobile">
           <a href="#reviews" className="header-item">
             REVIEWS
           </a>
@@ -47,7 +47,28 @@ export default function Home() {
             CONTACT
           </a>
         </nav>
+        <nav className="hide-on-desktop">
+          <a href="#about" className="header-item">
+            ABOUT
+          </a>
+        </nav>
+        <nav className="hide-on-desktop">
+          <a href="#menu" className="header-item">
+            MENU
+          </a>
+        </nav>
+        <nav className="hide-on-desktop">
+          <a href="#reviews" className="header-item">
+            REVIEWS
+          </a>
+        </nav>
+        <nav className="hide-on-desktop">
+          <a href="#contact" className="header-item">
+            CONTACT
+          </a>
+        </nav>
       </header>
+
       <main>
         <div className="container">
           <div>
@@ -94,7 +115,7 @@ export default function Home() {
             MENU
           </h3>
           <div className="divider"></div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="menu-columns">
             <div className="column-one">
               <h4>Meat</h4>
               <div>
@@ -225,6 +246,30 @@ export default function Home() {
 
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400&display=swap");
+
+        @media (max-width: 800px) {
+          .hide-on-mobile {
+            display: none;
+          }
+          header {
+            display: flex;
+            flex-direction: column;
+
+            margin: 0;
+          }
+          .container {
+            display: flex;
+            flex-direction: column;
+          }
+          .menu-columns {
+            flex-direction: column;
+          }
+        }
+        @media (min-width: 801px) {
+          .hide-on-desktop {
+            display: none;
+          }
+        }
         header {
           padding: 35px;
           display: flex;
@@ -245,6 +290,7 @@ export default function Home() {
         }
         main {
           height: 100%;
+          width: 100%;
           margin: 0 auto;
           background-color: #022b40;
           color: #fffde2;
@@ -252,7 +298,7 @@ export default function Home() {
         }
         .container {
           margin: 0 auto;
-          width: 1000px;
+          max-width: 1000px;
           height: 100%;
         }
         .small-heading {
@@ -265,7 +311,10 @@ export default function Home() {
           background-color: #f2521d;
           margin: 15px 0 50px 0;
         }
-
+        .menu-columns {
+          display: flex;
+          justify-content: space-between;
+        }
         .past-work {
           height: 350px;
           width: "auto";
@@ -293,9 +342,11 @@ export default function Home() {
         }
       `}</style>
       <style jsx global>{`
-        body {
+        body,
+        html {
           margin: 0px;
           padding: 0px;
+          overflow-x: hidden;
         }
       `}</style>
     </div>
