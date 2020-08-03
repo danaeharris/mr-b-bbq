@@ -251,7 +251,10 @@ export default function Home() {
             <span className="copy">
               Contact us for pricing and to check our availability at
             </span>
-            <a className="copy"> mrbsbarbeque@gmail.com</a>
+            <a className="copy" href="mailto:mrbsbarbeque@gmail.com">
+              {" "}
+              mrbsbarbeque@gmail.com
+            </a>
             <span className="copy">.</span>
           </div>
           <div style={{ marginTop: 5 }}>
