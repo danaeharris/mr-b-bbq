@@ -123,9 +123,9 @@ export default function Home() {
               <p className="copy">
                 Hi there! Our names are Chuck and Jan Binns. We’ve been catering
                 for the last 10 years. We specialise in BBQ and traditional
-                southern cooking. We’ve catered large cookouts, special events,
-                rehearsal dinners, and even weddings! We would love to make your
-                event extra special!
+                southern cooking. We’ve catered large cookouts, company picnics,
+                special events, rehearsal dinners, and even weddings! We would
+                love to make your event extra special!
               </p>
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function Home() {
                 <p className="menu">Salad</p>
               </div>
               <div>
-                <p className="menu">Mac and Cheese</p>
+                <p className="menu">Mama B's Mac and Cheese</p>
               </div>
               <div>
                 <p className="menu">Sweet Potato Souffle</p>
@@ -242,7 +242,7 @@ export default function Home() {
             reception extra special.”
           </p>
           <p className="copy">“Best Barbeque I’ve ever had!” </p>
-          <p className="copy">“Mrs B’s mac and cheese is to die for!” </p>
+          <p className="copy">“Mrs B's mac and cheese is to die for!” </p>
           <h3 className="small-heading" id="contact">
             CONTACT
           </h3>
