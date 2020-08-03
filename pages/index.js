@@ -314,7 +314,7 @@ export default function Home() {
           font-family: "Bebas Neue", cursive;
           font-size: 36px;
           color: #fffde2;
-          padding: 30px;
+          margin: 30px;
         }
         .header-image {
           height: 200px;
