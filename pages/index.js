@@ -10,6 +10,17 @@ export default function Home() {
     autoplaySpeed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
   };
   return (
     <div>
@@ -74,7 +85,15 @@ export default function Home() {
           <div>
             <h3 className="small-heading">PHOTOS</h3>
             <div className="divider"></div>
-            <Slider {...settings} style={{ width: 950, marginLeft: 25 }}>
+            <Slider
+              {...settings}
+              style={{
+                width: "80%",
+                marginLeft: "10%",
+                justifyContent: "center",
+                alignContent: "center",
+              }}
+            >
               <img src="./smoker.svg" className="past-work" />
               <img src="./fire.svg" className="past-work" />
               <img src="./cookies.svg" className="past-work" />
@@ -91,11 +110,11 @@ export default function Home() {
               ABOUT
             </h3>
             <div className="divider"></div>
-            <div style={{ display: "flex" }}>
+            <div className="about-section">
               <img
                 src="./aboutPic.png"
                 style={{
-                  height: 300,
+                  height: 350,
                   width: "auto",
                   paddingLeft: 0,
                   paddingRight: 50,
@@ -260,14 +279,27 @@ export default function Home() {
           .container {
             display: flex;
             flex-direction: column;
+            padding: 0 30px;
           }
           .menu-columns {
             flex-direction: column;
+          }
+          .copy {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 1.75;
           }
         }
         @media (min-width: 801px) {
           .hide-on-desktop {
             display: none;
+          }
+          .about-section {
+            display: flex;
+          }
+          .copy {
+            line-height: 1.25;
+            font-size: 18px;
           }
         }
         header {
@@ -307,7 +339,7 @@ export default function Home() {
         }
         .divider {
           height: 2px;
-          width: 1000px;
+          width: 100%;
           background-color: #f2521d;
           margin: 15px 0 50px 0;
         }
@@ -316,7 +348,7 @@ export default function Home() {
           justify-content: space-between;
         }
         .past-work {
-          height: 350px;
+          height: 280px;
           width: "auto";
           margin: 10px;
         }
@@ -335,9 +367,7 @@ export default function Home() {
         }
         .copy {
           margin: 0;
-          line-height: 1.25;
           font-family: "Montserrat", sans-serif;
-          font-size: 18px;
           color: #fffde2;
         }
       `}</style>
@@ -346,6 +376,7 @@ export default function Home() {
         html {
           margin: 0px;
           padding: 0px;
+          background-color: #f2521d;
           overflow-x: hidden;
         }
       `}</style>
