@@ -22,6 +22,7 @@ export default function Home() {
       },
     ],
   };
+
   return (
     <div>
       <Head>
@@ -298,7 +299,6 @@ export default function Home() {
           .copy {
             padding-top: 20px;
             font-size: 16px;
-            line-height: 1.75;
           }
         }
         @media (min-width: 801px) {
@@ -309,7 +309,6 @@ export default function Home() {
             display: flex;
           }
           .copy {
-            line-height: 1.25;
             font-size: 18px;
           }
         }
@@ -378,8 +377,12 @@ export default function Home() {
         }
         .copy {
           margin: 0;
+          line-height: 2;
           font-family: "Montserrat", sans-serif;
           color: #fffde2;
+        }
+        .slick-dots {
+          opacity: 50%;
         }
       `}</style>
       <style jsx global>{`
@@ -389,6 +392,9 @@ export default function Home() {
           padding: 0px;
           background-color: #f2521d;
           overflow-x: hidden;
+        }
+        .slick-dots li button:before {
+          color: #fffde2 !important;
         }
       `}</style>
     </div>
