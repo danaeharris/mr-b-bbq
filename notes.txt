@@ -31,4 +31,8 @@ Get Dad to give me reviews.
         • Usually this is an A-record (but sometimes a CNAME record)
             • An IP address like 12.4543.1233.0
 
+* Types of Images:*
 
+• jpg: small file size, compressed, no transparency.
+• png: often larger file size, usually not compressed, do support transparency
+• svg: vector graphics (icons) - infinite resolution

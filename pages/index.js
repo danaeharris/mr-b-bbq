@@ -6,13 +6,22 @@ export default function Home() {
     dots: true,
     infinite: true,
     autoplay: true,
-    speed: 2000,
+    speed: 2500,
     autoplaySpeed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 800,
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -103,17 +112,43 @@ export default function Home() {
                 alignContent: "center",
               }}
             >
-              <img src="./smoker.svg" className="past-work" />
-              <img src="./fire.svg" className="past-work" />
-              <img src="./cookies.svg" className="past-work" />
-              <img src="./strawberry-cookies.svg" className="past-work" />
-              <img src="./sweet-tea.svg" className="past-work" />{" "}
-              <img src="./wedding-people.svg" className="past-work" />
-              <img src="./infused-water.svg" className="past-work" />
-              <img src="./skewers.svg" className="past-work" />
-              <img src="./grilled-chicken.svg" className="past-work" />
-              <img src="./roasted-potatoes.svg" className="past-work" />
-              <img src="./brookies.svg" className="past-work" />
+              <div className="slider-item-container">
+                <img src="./infused-water.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                <img src="./cookies.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                <img src="./melina-randy-wedding.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                <img src="./strawberry-cookies.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                <img src="./sweet-tea.jpg" className="past-work" />{" "}
+              </div>
+              <div className="slider-item-container">
+                <img src="./wedding-people.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                <img src="./smoker.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                <img src="./fire.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                <img src="./skewers.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                <img src="./grilled-chicken.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                <img src="./roasted-potatoes.jpg" className="past-work" />
+              </div>
+              <div className="slider-item-container">
+                {" "}
+                <img src="./brookies.jpg" className="past-work" />
+              </div>
             </Slider>
             <h3 className="small-heading" id="about">
               ABOUT
@@ -251,7 +286,12 @@ export default function Home() {
             reception extra special.”
           </p>
           <p className="copy">“Best Barbeque I’ve ever had!” </p>
-          <p className="copy">“Mrs B's mac and cheese is to die for!” </p>
+          <p className="copy">
+            The food was absolutely delicious! Mr. and Mrs. Binns catered our
+            small wedding. They are a joy to work with and deliver exactly what
+            you are looking for. I would definitely recommend and hire them for
+            any future events.
+          </p>
           <h3 className="small-heading" id="contact">
             CONTACT
           </h3>
@@ -278,39 +318,9 @@ export default function Home() {
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400&display=swap");
 
-        @media (max-width: 800px) {
-          .hide-on-mobile {
-            display: none;
-          }
-          header {
-            display: flex;
-            flex-direction: column;
-
-            margin: 0;
-          }
-          .container {
-            display: flex;
-            flex-direction: column;
-            padding: 0 30px;
-          }
-          .menu-columns {
-            flex-direction: column;
-          }
-          .copy {
-            padding-top: 20px;
-            font-size: 16px;
-          }
-        }
-        @media (min-width: 801px) {
-          .hide-on-desktop {
-            display: none;
-          }
-          .about-section {
-            display: flex;
-          }
-          .copy {
-            font-size: 18px;
-          }
+        .slider-item-container img {
+          margin: 0 auto;
+          display: block;
         }
         header {
           padding: 35px;
@@ -358,8 +368,8 @@ export default function Home() {
           justify-content: space-between;
         }
         .past-work {
-          height: 280px;
-          width: "auto";
+          max-height: 280px;
+          width: auto;
           margin: 10px;
         }
         .menu {
@@ -377,12 +387,45 @@ export default function Home() {
         }
         .copy {
           margin: 0;
+          font-size: 18px;
           line-height: 2;
           font-family: "Montserrat", sans-serif;
           color: #fffde2;
         }
         .slick-dots {
           opacity: 50%;
+        }
+
+        @media (max-width: 800px) {
+          .hide-on-mobile {
+            display: none;
+          }
+          header {
+            display: flex;
+            flex-direction: column;
+
+            margin: 0;
+          }
+          .container {
+            display: flex;
+            flex-direction: column;
+            padding: 0 30px;
+          }
+          .menu-columns {
+            flex-direction: column;
+          }
+          .copy {
+            padding-top: 20px;
+            font-size: 16px;
+          }
+        }
+        @media (min-width: 801px) {
+          .hide-on-desktop {
+            display: none;
+          }
+          .about-section {
+            display: block;
+          }
         }
       `}</style>
       <style jsx global>{`
