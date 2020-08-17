@@ -43,7 +43,18 @@ export default function Home() {
         />
         <meta property="og:image" content="https://mrb-bbq.com/meta-logo.png" />
         <meta property="og:url" content="https://mrb-bbq.com" />
+
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Resume Builder" />
+        <meta
+          name="twitter:description"
+          content="Real wood. Real Fire. Real Slow."
+        />
+        <meta
+          name="twitter:image"
+          content="https://mrb-bbq.com/meta-logo.png"
+        />
+
         <title>Mr. B's BBQ</title>
         <link rel="icon" href="/favicon.png" />
         <link
